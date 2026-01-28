@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Online Shop - Home</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    body{font-family: Arial, Helvetica, sans-serif; margin:0; padding:0}
+    header, footer{background:#222;color:#fff;padding:12px 20px}
+    nav a{color:#fff;margin-right:12px;text-decoration:none}
+    .container{padding:20px}
+    .hero{padding:24px;background:#f5f5f5;border-radius:6px}
+    .products-grid{display:flex;flex-wrap:wrap;gap:12px;margin-top:16px}
+    .card{border:1px solid #ddd;padding:12px;width:200px;border-radius:6px}
+    .btn{display:inline-block;padding:6px 10px;border-radius:4px;background:#007bff;color:#fff;text-decoration:none}
+  </style>
+</head>
+<body>
+  <header>
+    <h1 style="display:inline">Online Shop</h1>
+    <nav style="float:right">
+      <a href="/products">Products</a>
+      <a href="/cart">Cart</a>
+      <a href="/admin/products">Admin</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="hero">
+      <h2>Welcome to our Online Shop</h2>
+      <p>Browse our selection of products and shop easily.</p>
+      <a class="btn" href="/products">Start shopping</a>
+    </div>
+
+    <h3>Featured products</h3>
+    <div class="products-grid">
+      <!-- Example static product cards; backend should populate dynamically -->
+      <div class="card">
+        <img src="https://via.placeholder.com/180x100" alt="Product image">
+        <h4>Product 1</h4>
+        <p>$19.99</p>
+        <a class="btn" href="/products/1">View</a>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/180x100" alt="Product image">
+        <h4>Product 2</h4>
+        <p>$29.99</p>
+        <a class="btn" href="/products/2">View</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <small>© Online Shop - University Project</small>
+  </footer>
+</body>
+</html>
