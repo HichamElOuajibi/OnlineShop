@@ -9,17 +9,21 @@ Java 25 + Spring Boot (Maven) prototype for an online shop with UI pages and RES
 - Checkout with payment selection
 - Admin product creation + order view
 
-🚀 Run
+🚀 Run (Windows PowerShell)
 ```powershell
 cd "C:\Users\vac\OnlineShop"
 .\mvnw.cmd spring-boot:run
 ```
 
 Open:
-- `http://localhost:8080/`
+- `http://localhost:8080/` (login)
+- `http://localhost:8080/home`
 - `http://localhost:8080/products`
 - `http://localhost:8080/cart`
 - `http://localhost:8080/checkout`
+- `http://localhost:8080/orders`
+- `http://localhost:8080/register`
+- `http://localhost:8080/about`
 
 🧪 Tests
 ```powershell
