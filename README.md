@@ -9,9 +9,15 @@ Java 25 + Spring Boot (Maven) prototype for an online shop with UI pages and RES
 - Checkout with payment selection
 - Admin product creation + order view
 
-🚀 Run (Windows PowerShell)
+🚀 Run
+```bash
+cd OnlineShop
+./mvnw spring-boot:run
+```
+
+Windows PowerShell:
 ```powershell
-cd "C:\Users\vac\OnlineShop"
+cd OnlineShop
 .\mvnw.cmd spring-boot:run
 ```
 
@@ -26,6 +32,11 @@ Open:
 - `http://localhost:8080/about`
 
 🧪 Tests
+```bash
+./mvnw test
+```
+
+Windows PowerShell:
 ```powershell
 .\mvnw.cmd test
 ```
