@@ -1,0 +1,405 @@
+<html lang="en">
+
+  <head>
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme:
+        {
+          extend:
+          {
+            fontFamily:
+            {
+              'inter': ['Inter', 'sans-serif']
+            },
+            colors:
+            {
+              'primary-purple': '#800080',
+              'primary-blue': '#0000FF'
+            }
+          }
+        }
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet">
+    <script>
+      window.FontAwesomeConfig = {
+        autoReplaceSvg: 'nest'
+      };
+    </script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      ::-webkit-scrollbar
+      {
+        display: none;
+      }
+
+      body
+      {
+        font-family: 'Inter', sans-serif;
+      }
+    </style>
+    <style data-grapesjs-styles="true">
+      *
+      {
+        box-sizing: border-box;
+      }
+
+      body
+      {
+        margin: 0;
+      }
+
+      ::-webkit-scrollbar
+      {
+        display: none;
+      }
+
+      body
+      {
+        font-family: Inter, sans-serif;
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-50">
+    <header id="header" class="bg-white shadow-sm sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center space-x-2">
+            <div
+              class="w-10 h-10 bg-gradient-to-br from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
+              <i class="fa-solid fa-shop text-white text-xl"></i></div><span
+              class="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">ShopHub</span>
+          </div>
+          <nav class="flex items-center space-x-8"><a href="/home"
+              class="text-gray-600 hover:text-purple-600 font-medium transition-colors">Home</a><a
+              href="/products"
+              class="text-purple-600 font-semibold border-b-2 border-purple-600 pb-1">Products</a><a
+              href="/cart"
+              class="text-gray-600 hover:text-purple-600 font-medium transition-colors">Cart</a><a
+              href="/orders"
+              class="text-gray-600 hover:text-purple-600 font-medium transition-colors">Orders</a><a
+              href="/login"
+              class="text-gray-600 hover:text-purple-600 font-medium transition-colors">Login</a><a
+              href="/about"
+              class="text-gray-600 hover:text-purple-600 font-medium transition-colors">About</a>
+          </nav>
+          <div class="flex items-center space-x-4"><button
+              class="relative text-gray-600 hover:text-purple-600 transition-colors"><i
+                class="fa-solid fa-shopping-cart text-xl"></i><span
+                class="absolute -top-2 -right-2 bg-purple-600 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">3</span></button><button
+              class="text-gray-600 hover:text-purple-600 transition-colors"><i
+                class="fa-solid fa-user text-xl"></i></button></div>
+        </div>
+      </div>
+    </header>
+    <section id="page-header"
+      class="bg-gradient-to-br from-purple-600 to-blue-600 py-16">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center text-white">
+          <h1 class="text-5xl font-bold mb-4">Our Products</h1>
+          <p class="text-xl text-white/90">Discover our amazing collection of
+            quality products</p>
+        </div>
+      </div>
+    </section>
+    <section id="filters-section"
+      class="py-8 bg-white border-b border-gray-200">
+      <div class="max-w-7xl mx-auto px-6">
+        <div
+          class="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
+          <div class="flex items-center space-x-4"><select
+              class="bg-gray-100 border border-gray-300 rounded-lg px-4 py-2 text-gray-700 focus:outline-none focus:border-purple-500">
+              <option>All Categories</option>
+              <option>Electronics</option>
+              <option>Fashion</option>
+              <option>Home &amp; Garden</option>
+              <option>Sports</option>
+            </select><select
+              class="bg-gray-100 border border-gray-300 rounded-lg px-4 py-2 text-gray-700 focus:outline-none focus:border-purple-500">
+              <option>Sort by: Featured</option>
+              <option>Price: Low to High</option>
+              <option>Price: High to Low</option>
+              <option>Newest First</option>
+              <option>Best Rated</option>
+            </select></div>
+          <div class="flex items-center space-x-4"><span
+              class="text-gray-600">Showing 1-12 of 48 products</span>
+            <div class="flex items-center space-x-2"><button
+                class="p-2 bg-purple-600 text-white rounded-lg"><i
+                  class="fa-solid fa-th-large"></i></button><button
+                class="p-2 bg-gray-200 text-gray-600 rounded-lg hover:bg-gray-300"><i
+                  class="fa-solid fa-list"></i></button></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="products-grid" class="py-12 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-6">
+        <div id="admin-panel" class="hidden mb-8 bg-white rounded-2xl shadow-lg p-6">
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">Admin: Add Product</h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <input id="admin-name" class="border border-gray-300 rounded-lg px-4 py-2" placeholder="Product name">
+            <input id="admin-description" class="border border-gray-300 rounded-lg px-4 py-2" placeholder="Description">
+            <input id="admin-price" type="number" step="0.01" class="border border-gray-300 rounded-lg px-4 py-2" placeholder="Price">
+          </div>
+          <div class="mt-4 flex items-center space-x-3">
+            <button id="admin-create" class="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-full font-semibold">
+              Create Product
+            </button>
+            <button id="admin-load-orders" class="px-6 py-2 rounded-full border border-gray-300 text-gray-700">
+              View Orders
+            </button>
+          </div>
+          <div id="admin-orders" class="mt-4 text-sm text-gray-700"></div>
+        </div>
+
+        <div id="product-grid" class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8"></div>
+          <div id="pagination"
+          class="flex items-center justify-center mt-12 space-x-2"><button
+            class="px-4 py-2 text-gray-500 hover:text-purple-600 transition-colors"><i
+              class="fa-solid fa-chevron-left"></i></button><button
+            class="px-4 py-2 bg-purple-600 text-white rounded-lg">1</button><button
+            class="px-4 py-2 text-gray-600 hover:text-purple-600 transition-colors">2</button><button
+            class="px-4 py-2 text-gray-600 hover:text-purple-600 transition-colors">3</button><button
+            class="px-4 py-2 text-gray-600 hover:text-purple-600 transition-colors">4</button><button
+            class="px-4 py-2 text-gray-600 hover:text-purple-600 transition-colors"><i
+              class="fa-solid fa-chevron-right"></i></button></div>
+      </div>
+    </section>
+    <footer id="footer" class="bg-gray-900 text-white py-12">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+          <div id="footer-brand">
+            <div class="flex items-center space-x-2 mb-4">
+              <div
+                class="w-10 h-10 bg-gradient-to-br from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
+                <i class="fa-solid fa-shop text-white text-xl"></i></div><span
+                class="text-2xl font-bold">ShopHub</span>
+            </div>
+            <p class="text-gray-400">Your trusted online shopping destination
+              for quality products and exceptional service.</p>
+          </div>
+          <div id="footer-links-shop">
+            <h3 class="font-semibold text-lg mb-4">Shop</h3>
+            <ul class="space-y-2">
+              <li><a href="/products"
+                  class="text-gray-400 hover:text-white transition-colors">All
+                  Products</a></li>
+              <li><a href="/products"
+                  class="text-gray-400 hover:text-white transition-colors">New
+                  Arrivals</a></li>
+              <li><a href="/products"
+                  class="text-gray-400 hover:text-white transition-colors">Best
+                  Sellers</a></li>
+              <li><a href="/products"
+                  class="text-gray-400 hover:text-white transition-colors">Special
+                  Offers</a></li>
+            </ul>
+          </div>
+          <div id="footer-links-account">
+            <h3 class="font-semibold text-lg mb-4">Account</h3>
+            <ul class="space-y-2">
+              <li><a href="/login"
+                  class="text-gray-400 hover:text-white transition-colors">Login</a>
+              </li>
+              <li><a href="/register"
+                  class="text-gray-400 hover:text-white transition-colors">Register</a>
+              </li>
+              <li><a href="/orders"
+                  class="text-gray-400 hover:text-white transition-colors">My
+                  Orders</a></li>
+              <li><a href="/cart"
+                  class="text-gray-400 hover:text-white transition-colors">Shopping
+                  Cart</a></li>
+            </ul>
+          </div>
+          <div id="footer-links-about">
+            <h3 class="font-semibold text-lg mb-4">About</h3>
+            <ul class="space-y-2">
+              <li><a href="/about"
+                  class="text-gray-400 hover:text-white transition-colors">About
+                  Project</a></li>
+              <li><a href="/about"
+                  class="text-gray-400 hover:text-white transition-colors">Technologies</a>
+              </li>
+              <li><a href="#"
+                  class="text-gray-400 hover:text-white transition-colors">Contact
+                  Us</a></li>
+              <li><a href="#"
+                  class="text-gray-400 hover:text-white transition-colors">Privacy
+                  Policy</a></li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-800 pt-8 flex flex-col md:flex-row items-center justify-between">
+          <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2024 ShopHub. Academic
+            prototype for Software Development Methodologies course.</p>
+          <div class="flex items-center space-x-6"><a href="#"
+              class="text-gray-400 hover:text-white transition-colors"><i
+                class="fa-brands fa-facebook text-xl"></i></a><a href="#"
+              class="text-gray-400 hover:text-white transition-colors"><i
+                class="fa-brands fa-twitter text-xl"></i></a><a href="#"
+              class="text-gray-400 hover:text-white transition-colors"><i
+                class="fa-brands fa-instagram text-xl"></i></a><a href="#"
+              class="text-gray-400 hover:text-white transition-colors"><i
+                class="fa-brands fa-linkedin text-xl"></i></a></div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const userKey = "onlineShopUser";
+
+      function getUser() {
+        const raw = localStorage.getItem(userKey);
+        return raw ? JSON.parse(raw) : null;
+      }
+
+      function setAdminVisibility() {
+        const user = getUser();
+        const adminPanel = document.getElementById("admin-panel");
+        if (user && user.role === "ADMIN") {
+          adminPanel.classList.remove("hidden");
+        } else {
+          adminPanel.classList.add("hidden");
+        }
+      }
+
+      async function loadProducts() {
+        const response = await fetch("/api/products");
+        const products = await response.json();
+        const grid = document.getElementById("product-grid");
+        grid.innerHTML = "";
+        const user = getUser();
+
+        products.forEach(product => {
+          const card = document.createElement("div");
+          card.className = "bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2";
+          const adminActions = user && user.role === "ADMIN"
+            ? `<button data-delete="${product.id}" class="mt-3 w-full border border-red-300 text-red-600 py-2 rounded-full font-semibold">Delete</button>`
+            : "";
+          card.innerHTML = `
+            <div class="h-64 overflow-hidden">
+              <img src="https://via.placeholder.com/400x300?text=Product" alt="${product.name}" class="w-full h-full object-cover rounded-t-2xl">
+            </div>
+            <div class="p-6">
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">${product.name}</h3>
+              <p class="text-gray-600 text-sm mb-4">${product.description || "Product description"}</p>
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-2xl font-bold text-purple-600">$${product.price.toFixed(2)}</span>
+              </div>
+              <button data-add="${product.id}" class="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 rounded-full font-semibold hover:shadow-lg transition-all">
+                Add to Cart
+              </button>
+              ${adminActions}
+            </div>
+          `;
+          grid.appendChild(card);
+        });
+      }
+
+      async function addToCart(productId) {
+        const user = getUser();
+        if (!user) {
+          alert("Please login first.");
+          return;
+        }
+        const response = await fetch(`/api/cart/${user.userId}/items`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ productId, quantity: 1 })
+        });
+        if (!response.ok) {
+          const error = await response.text();
+          alert(error || "Failed to add to cart.");
+          return;
+        }
+        alert("Added to cart!");
+      }
+
+      async function deleteProduct(productId) {
+        const response = await fetch(`/api/admin/products/${productId}`, {
+          method: "DELETE"
+        });
+        if (!response.ok) {
+          const error = await response.text();
+          alert(error || "Failed to delete product.");
+          return;
+        }
+        loadProducts();
+      }
+
+      async function createProduct() {
+        const name = document.getElementById("admin-name").value.trim();
+        const description = document.getElementById("admin-description").value.trim();
+        const price = Number(document.getElementById("admin-price").value);
+        if (!name || Number.isNaN(price)) {
+          alert("Enter product name and price.");
+          return;
+        }
+        const response = await fetch("/api/admin/products", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ name, description, price, inStock: true })
+        });
+        if (!response.ok) {
+          const error = await response.text();
+          alert(error || "Failed to create product.");
+          return;
+        }
+        document.getElementById("admin-name").value = "";
+        document.getElementById("admin-description").value = "";
+        document.getElementById("admin-price").value = "";
+        loadProducts();
+      }
+
+      async function loadOrders() {
+        const response = await fetch("/api/admin/orders");
+        if (!response.ok) {
+          const error = await response.text();
+          alert(error || "Failed to load orders.");
+          return;
+        }
+        const orders = await response.json();
+        const output = document.getElementById("admin-orders");
+        if (!orders.length) {
+          output.textContent = "No orders yet.";
+          return;
+        }
+        output.innerHTML = orders.map(order =>
+          `<div>Order #${order.id} - $${order.totalAmount.toFixed(2)} - ${order.status}</div>`
+        ).join("");
+      }
+
+      document.getElementById("product-grid").addEventListener("click", (event) => {
+        if (event.target.dataset.add) {
+          addToCart(event.target.dataset.add);
+        }
+        if (event.target.dataset.delete) {
+          deleteProduct(event.target.dataset.delete);
+        }
+      });
+
+      document.getElementById("admin-create").addEventListener("click", createProduct);
+      document.getElementById("admin-load-orders").addEventListener("click", loadOrders);
+
+      setAdminVisibility();
+      loadProducts();
+    </script>
+  </body>
+
+</html>

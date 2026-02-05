@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif']
+                    },
+                    colors: {
+                        'primary-purple': '#800080',
+                        'primary-blue': '#0000FF'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        ::-webkit-scrollbar { display: none; }
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50">
+    
+    <header id="header" class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-gradient-to-br from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
+                        <i class="fa-solid fa-shop text-white text-xl"></i>
+                    </div>
+                    <span class="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">ShopHub</span>
+                </div>
+                
+                <nav class="flex items-center space-x-8">
+                    <a href="/home" class="text-gray-600 hover:text-purple-600 font-medium transition-colors">Home</a>
+                    <a href="/products" class="text-gray-600 hover:text-purple-600 font-medium transition-colors">Products</a>
+                    <a href="/cart" class="text-gray-600 hover:text-purple-600 font-medium transition-colors">Cart</a>
+                    <a href="/orders" class="text-gray-600 hover:text-purple-600 font-medium transition-colors">Orders</a>
+                    <a href="/login" class="text-gray-600 hover:text-purple-600 font-medium transition-colors">Login</a>
+                    <a href="/about" class="text-purple-600 font-semibold border-b-2 border-purple-600 pb-1">About</a>
+                </nav>
+                
+                <div class="flex items-center space-x-4">
+                    <button class="relative text-gray-600 hover:text-purple-600 transition-colors">
+                        <i class="fa-solid fa-shopping-cart text-xl"></i>
+                        <span class="absolute -top-2 -right-2 bg-purple-600 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">2</span>
+                    </button>
+                    <button class="text-gray-600 hover:text-purple-600 transition-colors">
+                        <i class="fa-solid fa-user text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="page-header" class="bg-gradient-to-br from-purple-600 to-blue-600 py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center text-white">
+                <div class="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <i class="fa-solid fa-info-circle text-white text-4xl"></i>
+                </div>
+                <h1 class="text-5xl font-bold mb-4">About ShopHub</h1>
+                <p class="text-xl text-white/90">Academic Spring Boot Online Shop Prototype</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="project-overview" class="py-12">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 mb-8">
+                <div class="flex items-start space-x-6">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-600 to-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <i class="fa-solid fa-graduation-cap text-white text-2xl"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-4">Project Overview</h2>
+                        <p class="text-gray-700 text-lg leading-relaxed mb-4">
+                            ShopHub is an academic Spring Boot Online Shop prototype developed as part of the Software Development Methodologies course at university. This project serves as a comprehensive demonstration of modern web development practices, design patterns, and user interface principles.
+                        </p>
+                        <p class="text-gray-700 text-lg leading-relaxed mb-4">
+                            The application showcases a complete e-commerce workflow including product browsing, shopping cart management, checkout process, user authentication interfaces, and order tracking. The UI is connected to a Spring Boot REST API with in-memory data storage to demonstrate real user actions during presentations.
+                        </p>
+                        <p class="text-gray-700 text-lg leading-relaxed">
+                            This prototype emphasizes clean code architecture, responsive design principles, and intuitive user experience patterns commonly found in production-grade e-commerce platforms.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="purpose-section" class="bg-gradient-to-br from-purple-50 to-blue-50 border border-purple-200 rounded-2xl p-8 mb-8">
+                <div class="flex items-start space-x-6">
+                    <div class="w-16 h-16 bg-white rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm">
+                        <i class="fa-solid fa-bullseye text-purple-600 text-2xl"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-4">Purpose & Objectives</h2>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check-circle text-purple-600 mt-1 mr-3"></i>
+                                <span class="text-gray-700 text-lg">Demonstrate understanding of Spring Boot framework architecture and MVC patterns</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check-circle text-purple-600 mt-1 mr-3"></i>
+                                <span class="text-gray-700 text-lg">Showcase modern front-end development skills with HTML, CSS, and Tailwind</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check-circle text-purple-600 mt-1 mr-3"></i>
+                                <span class="text-gray-700 text-lg">Implement responsive design principles for optimal user experience</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check-circle text-purple-600 mt-1 mr-3"></i>
+                                <span class="text-gray-700 text-lg">Create a professional UI prototype suitable for academic presentation</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check-circle text-purple-600 mt-1 mr-3"></i>
+                                <span class="text-gray-700 text-lg">Apply software development methodologies in a practical e-commerce context</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="technologies-section" class="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 mb-8">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-3">Technologies Used</h2>
+                    <p class="text-gray-600 text-lg">Modern tech stack for robust web application development</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div id="tech-card-1" class="bg-gradient-to-br from-green-50 to-green-100 border border-green-200 rounded-xl p-6 hover:shadow-lg transition-all transform hover:-translate-y-1">
+                        <div class="w-14 h-14 bg-white rounded-lg flex items-center justify-center mb-4 shadow-sm">
+                            <i class="fa-brands fa-java text-green-600 text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Spring Boot</h3>
+                        <p class="text-gray-700 mb-3">Java-based framework for building enterprise-grade web applications with robust backend architecture.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-white rounded-full text-xs font-medium text-green-700">MVC Pattern</span>
+                            <span class="px-3 py-1 bg-white rounded-full text-xs font-medium text-green-700">REST APIs</span>
+                        </div>
+                    </div>
+
+                    <div id="tech-card-2" class="bg-gradient-to-br from-blue-50 to-blue-100 border border-blue-200 rounded-xl p-6 hover:shadow-lg transition-all transform hover:-translate-y-1">
+                        <div class="w-14 h-14 bg-white rounded-lg flex items-center justify-center mb-4 shadow-sm">
+                            <i class="fa-solid fa-code text-blue-600 text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">HTML & Tailwind CSS</h3>
+                        <p class="text-gray-700 mb-3">Modern front-end technologies for creating responsive, beautiful, and maintainable user interfaces.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-white rounded-full text-xs font-medium text-blue-700">Responsive</span>
+                            <span class="px-3 py-1 bg-white rounded-full text-xs font-medium text-blue-700">Utility-First</span>
+                        </div>
+                    </div>
+
+                    <div id="tech-card-3" class="bg-gradient-to-br from-purple-50 to-purple-100 border border-purple-200 rounded-xl p-6 hover:shadow-lg transition-all transform hover:-translate-y-1">
+                        <div class="w-14 h-14 bg-white rounded-lg flex items-center justify-center mb-4 shadow-sm">
+                            <i class="fa-brands fa-font-awesome text-purple-600 text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Font Awesome</h3>
+                        <p class="text-gray-700 mb-3">Comprehensive icon library providing scalable vector icons for enhanced visual communication.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-white rounded-full text-xs font-medium text-purple-700">Icons</span>
+                            <span class="px-3 py-1 bg-white rounded-full text-xs font-medium text-purple-700">Scalable</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="project-highlights" class="mb-8">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-3">Project Highlights</h2>
+                    <p class="text-gray-600 text-lg">Key features and accomplishments of this prototype</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div id="highlight-card-1" class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-purple-600 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-palette text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-gray-900 mb-2">Modern UI/UX Design</h3>
+                                <p class="text-gray-600">Clean, intuitive interface with gradient accents and smooth transitions for enhanced user experience.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="highlight-card-2" class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-purple-600 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-mobile-screen text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-gray-900 mb-2">Fully Responsive</h3>
+                                <p class="text-gray-600">Optimized for all devices - desktop, tablet, and mobile with adaptive layouts and touch-friendly interactions.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="highlight-card-3" class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-purple-600 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-shopping-bag text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-gray-900 mb-2">Complete E-commerce Flow</h3>
+                                <p class="text-gray-600">Full shopping experience from product browsing to checkout, demonstrating real-world application structure.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="highlight-card-4" class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-purple-600 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-code-branch text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-gray-900 mb-2">Best Practices</h3>
+                                <p class="text-gray-600">Implements industry-standard coding conventions, design patterns, and accessibility guidelines.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="disclaimer-section" class="bg-yellow-50 border border-yellow-200 rounded-xl p-6">
+                <div class="flex items-start space-x-4">
+                    <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <i class="fa-solid fa-triangle-exclamation text-yellow-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Academic Prototype Notice</h3>
+                        <p class="text-gray-700">
+                            This is an academic prototype with real UI interactions and REST endpoints. Data is stored in memory for demonstration purposes (no database), and payment processing is simulated.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer" class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div id="footer-brand">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
+                            <i class="fa-solid fa-shop text-white text-xl"></i>
+                        </div>
+                        <span class="text-2xl font-bold">ShopHub</span>
+                    </div>
+                    <p class="text-gray-400">Your trusted online shopping destination for quality products and exceptional service.</p>
+                </div>
+                
+                <div id="footer-links-shop">
+                    <h3 class="font-semibold text-lg mb-4">Shop</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/products" class="text-gray-400 hover:text-white transition-colors">All Products</a></li>
+                        <li><a href="/products" class="text-gray-400 hover:text-white transition-colors">New Arrivals</a></li>
+                        <li><a href="/products" class="text-gray-400 hover:text-white transition-colors">Best Sellers</a></li>
+                        <li><a href="/products" class="text-gray-400 hover:text-white transition-colors">Special Offers</a></li>
+                    </ul>
+                </div>
+                
+                <div id="footer-links-account">
+                    <h3 class="font-semibold text-lg mb-4">Account</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/login" class="text-gray-400 hover:text-white transition-colors">Login</a></li>
+                        <li><a href="/register" class="text-gray-400 hover:text-white transition-colors">Register</a></li>
+                        <li><a href="/orders" class="text-gray-400 hover:text-white transition-colors">My Orders</a></li>
+                        <li><a href="/cart" class="text-gray-400 hover:text-white transition-colors">Shopping Cart</a></li>
+                    </ul>
+                </div>
+                
+                <div id="footer-links-about">
+                    <h3 class="font-semibold text-lg mb-4">About</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/about" class="text-gray-400 hover:text-white transition-colors">About Project</a></li>
+                        <li><a href="/about" class="text-gray-400 hover:text-white transition-colors">Technologies</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Contact Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row items-center justify-between">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">&copy; 2024 ShopHub. Academic prototype for Software Development Methodologies course.</p>
+                <div class="flex items-center space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fa-brands fa-facebook text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fa-brands fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fa-brands fa-instagram text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fa-brands fa-linkedin text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

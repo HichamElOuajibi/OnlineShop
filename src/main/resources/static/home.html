@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif']
+                    },
+                    colors: {
+                        'primary-purple': '#800080',
+                        'primary-blue': '#0000FF'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        ::-webkit-scrollbar { display: none; }
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50">
+    
+    <header id="header" class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-gradient-to-br from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
+                        <i class="fa-solid fa-shop text-white text-xl"></i>
+                    </div>
+                    <span class="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">ShopHub</span>
+                </div>
+                
+                <nav class="flex items-center space-x-8">
+                    <a href="/home" class="text-purple-600 font-semibold border-b-2 border-purple-600 pb-1">Home</a>
+                    <a href="/products" class="text-gray-600 hover:text-purple-600 font-medium transition-colors">Products</a>
+                    <a href="/cart" class="text-gray-600 hover:text-purple-600 font-medium transition-colors">Cart</a>
+                    <a href="/orders" class="text-gray-600 hover:text-purple-600 font-medium transition-colors">Orders</a>
+                    <a href="/login" class="text-gray-600 hover:text-purple-600 font-medium transition-colors">Login</a>
+                    <a href="/about" class="text-gray-600 hover:text-purple-600 font-medium transition-colors">About</a>
+                </nav>
+                
+                <div class="flex items-center space-x-4">
+                    <button class="relative text-gray-600 hover:text-purple-600 transition-colors">
+                        <i class="fa-solid fa-shopping-cart text-xl"></i>
+                        <span class="absolute -top-2 -right-2 bg-purple-600 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">0</span>
+                    </button>
+                    <button class="text-gray-600 hover:text-purple-600 transition-colors">
+                        <i class="fa-solid fa-user text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="hero-section" class="relative bg-gradient-to-br from-purple-600 via-purple-500 to-blue-600 h-[600px] flex items-center overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-10"></div>
+        <div class="absolute top-20 right-20 w-64 h-64 bg-white opacity-10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-20 left-20 w-96 h-96 bg-blue-400 opacity-10 rounded-full blur-3xl"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="max-w-3xl">
+                <h1 class="text-6xl font-bold text-white mb-6 leading-tight">Welcome to ShopHub</h1>
+                <p class="text-xl text-white/90 mb-8 leading-relaxed">Your one-stop destination for amazing products. Discover, shop, and enjoy a seamless online shopping experience with our curated collection.</p>
+                
+                <div class="flex items-center space-x-4">
+                    <a href="/products" class="bg-white text-purple-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                        Shop Now
+                    </a>
+                    <a href="/products" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-purple-600 transition-all shadow-lg">
+                        View Products
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features-section" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Why Choose ShopHub?</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Experience the best online shopping with our user-friendly features designed to make your journey smooth and enjoyable.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div id="feature-card-products" class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-600 to-blue-600 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-box text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Wide Product Range</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">Browse through our extensive collection of products across multiple categories. Find exactly what you're looking for with our intuitive product catalog.</p>
+                    <a href="/products" class="text-purple-600 font-semibold hover:text-purple-700 inline-flex items-center">
+                        Explore Products <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <div id="feature-card-cart" class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-600 to-blue-600 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-shopping-cart text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Easy Cart Management</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">Add items to your cart effortlessly and manage your selections before checkout. Review your items anytime and make changes on the go.</p>
+                    <a href="/cart" class="text-purple-600 font-semibold hover:text-purple-700 inline-flex items-center">
+                        View Cart <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <div id="feature-card-checkout" class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-600 to-blue-600 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-credit-card text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Secure Checkout</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">Complete your purchase with confidence using our secure payment options. We support multiple payment methods including Stripe and PayPal.</p>
+                    <a href="/checkout" class="text-purple-600 font-semibold hover:text-purple-700 inline-flex items-center">
+                        Learn More <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="stats-section" class="py-20 bg-gradient-to-br from-purple-600 to-blue-600">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+                <div id="stat-products">
+                    <div class="text-5xl font-bold text-white mb-2">500+</div>
+                    <div class="text-xl text-white/90">Products</div>
+                </div>
+                <div id="stat-customers">
+                    <div class="text-5xl font-bold text-white mb-2">10K+</div>
+                    <div class="text-xl text-white/90">Happy Customers</div>
+                </div>
+                <div id="stat-orders">
+                    <div class="text-5xl font-bold text-white mb-2">25K+</div>
+                    <div class="text-xl text-white/90">Orders Delivered</div>
+                </div>
+                <div id="stat-rating">
+                    <div class="text-5xl font-bold text-white mb-2">4.9</div>
+                    <div class="text-xl text-white/90">Average Rating</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cta-section" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold text-gray-900 mb-6">Ready to Start Shopping?</h2>
+            <p class="text-xl text-gray-600 mb-8">Join thousands of satisfied customers and discover amazing products at great prices.</p>
+            <div class="flex items-center justify-center space-x-4">
+                <a href="/register" class="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-xl transition-all transform hover:-translate-y-1">
+                    Create Account
+                </a>
+                <a href="/products" class="bg-gray-100 text-gray-900 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-200 transition-all">
+                    Browse Products
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer" class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div id="footer-brand">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
+                            <i class="fa-solid fa-shop text-white text-xl"></i>
+                        </div>
+                        <span class="text-2xl font-bold">ShopHub</span>
+                    </div>
+                    <p class="text-gray-400">Your trusted online shopping destination for quality products and exceptional service.</p>
+                </div>
+                
+                <div id="footer-links-shop">
+                    <h3 class="font-semibold text-lg mb-4">Shop</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/products" class="text-gray-400 hover:text-white transition-colors">All Products</a></li>
+                        <li><a href="/products" class="text-gray-400 hover:text-white transition-colors">New Arrivals</a></li>
+                        <li><a href="/products" class="text-gray-400 hover:text-white transition-colors">Best Sellers</a></li>
+                        <li><a href="/products" class="text-gray-400 hover:text-white transition-colors">Special Offers</a></li>
+                    </ul>
+                </div>
+                
+                <div id="footer-links-account">
+                    <h3 class="font-semibold text-lg mb-4">Account</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/login" class="text-gray-400 hover:text-white transition-colors">Login</a></li>
+                        <li><a href="/register" class="text-gray-400 hover:text-white transition-colors">Register</a></li>
+                        <li><a href="/orders" class="text-gray-400 hover:text-white transition-colors">My Orders</a></li>
+                        <li><a href="/cart" class="text-gray-400 hover:text-white transition-colors">Shopping Cart</a></li>
+                    </ul>
+                </div>
+                
+                <div id="footer-links-about">
+                    <h3 class="font-semibold text-lg mb-4">About</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/about" class="text-gray-400 hover:text-white transition-colors">About Project</a></li>
+                        <li><a href="/about" class="text-gray-400 hover:text-white transition-colors">Technologies</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Contact Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row items-center justify-between">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">&copy; 2024 ShopHub. Academic prototype for Software Development Methodologies course.</p>
+                <div class="flex items-center space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fa-brands fa-facebook text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fa-brands fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fa-brands fa-instagram text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fa-brands fa-linkedin text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
